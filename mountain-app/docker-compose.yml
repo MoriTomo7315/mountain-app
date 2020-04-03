@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  client:
+    build: ./frontend
+    ports:
+      - 8080:8080
+    volumes:
+      - ./frontend:/app
+    command: yarn serve
+
+  mysql:
+    container_name: mysql
+    image: mysql:5.7
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_USER: root
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: mysql
+
+  server:
+    links:
+      - mysql
+    build: ./server
+    ports:
+      - 8888:8888
+    volumes:
+      - ./server:/api
