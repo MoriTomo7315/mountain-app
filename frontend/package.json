@@ -12,15 +12,19 @@
     "test": "jest"
   },
   "dependencies": {
+    "firebase": "^7.14.0",
+    "firebaseui": "^4.5.0",
     "nuxt": "^2.0.0"
   },
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.0",
+    "@mdi/font": "^5.0.45",
     "@nuxt/typescript-build": "^0.6.0",
     "@nuxtjs/vuetify": "^1.0.0",
     "@vue/test-utils": "^1.0.0-beta.27",
     "babel-jest": "^24.1.0",
     "jest": "^24.1.0",
-    "vue-jest": "^4.0.0-0",
-    "ts-jest": "^25.0.0"
+    "ts-jest": "^25.0.0",
+    "vue-jest": "^4.0.0-0"
   }
 }
