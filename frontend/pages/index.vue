@@ -1,62 +1,42 @@
 <template>
   <v-layout
-    column
     justify-center
     align-center
   >
     <v-flex
       xs12
       sm8
-      md6
+      md8
     >
-      <h1>ここにデフォで山１０こくらい表示されるよ</h1>
-      <v-col dense>
-        <v-card>
-          <v-card-title class="headline">
-            〇〇山
-          </v-card-title>
-          <v-card-text>
-            <p>〇〇県のおおきく立派な山</p>
-          </v-card-text>
-          <v-card-actions>
-            <v-spacer />
-            <v-btn
-              color="primary"
-              nuxt
-              to="/inspire"
-            >
-              詳細
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-        <v-card>
-          <v-card-title class="headline">
-            〇〇山
-          </v-card-title>
-          <v-card-text>
-            <p>〇〇県のおおきく立派な山</p>
-          </v-card-text>
-          <v-card-actions>
-            <v-spacer />
-            <v-btn
-              color="primary"
-              nuxt
-              to="/inspire"
-            >
-              詳細
-            </v-btn>
-          </v-card-actions>
-        </v-card>
-      </v-col>
+      <Headline />
+      <PostIndex />
     </v-flex>
   </v-layout>
 </template>
 
 <script>
+  import { mapGetters, mapState, mapActions } from 'vuex'
+  import Headline from '~/components/headline'
+  import PostIndex from '~/components/postIndex'
 
-export default {
-  components: {
-
+  export default {
+    components: {
+      Headline,
+      PostIndex
+    }
+    // async asyncData({ store }) {
+    //   if (store.getters['mountain/mountains'].length) {
+    //     return
+    //   }
+    //   await store.dispatch('mountain/fetchMountains')
+    // },
+    // computed: {
+    //   ...mapState({
+    //     mountains: state => state.mountain.mountains
+    //   }),
+    //   ...mapGetters('mountain', {
+    //     mountains: 'mountains'
+    //   })
+    // }
   }
-}
 </script>

@@ -14,7 +14,7 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      { rel: 'stylesheet', href:"https://use.fontawesome.com/releases/v5.6.1/css/all.css"}
+      { rel: 'stylesheet', href: "https://use.fontawesome.com/releases/v5.6.1/css/all.css"}
     ]
   },
   /*
@@ -25,6 +25,7 @@ export default {
   ** Global CSS
   */
   css: [
+    '@/assets/main.scss'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -35,14 +36,20 @@ export default {
   ** Nuxt.js dev-modules
   */
   buildModules: [
-    '@nuxt/typescript-build',
     '@nuxtjs/vuetify',
+    '@nuxtjs/proxy'
   ],
   /*
   ** Nuxt.js modules
   */
   modules: [
+    '@nuxtjs/proxy'
   ],
+  proxy: {
+    '/api': {
+      target: 'http://localhost:1323'
+    }
+  },
   /*
   ** vuetify module configuration
   ** https://github.com/nuxt-community/vuetify-module

@@ -1,0 +1,61 @@
+.title-link {
+  color: white;
+}
+
+.userpage {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  padding: 32px;
+  h1 {
+    padding-bottom: 16px;
+  }
+  div.userform {
+    width: 90%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 32px;
+
+    a {
+      width: 100%;
+      margin-top: 16px;
+      margin-bottom: 32px;
+    }
+  }
+}
+
+.headline-wrapper {
+  width: 100%;
+  height: auto;
+  background-image: url('../static/index_image.png');
+  margin: 0 auto;
+  margin-bottom: 36px;
+  padding-top: 76px;
+  padding-bottom: 76px;
+  text-align: center;
+
+  h1 {
+    text-align: center;
+    color: white;
+    padding: 16px;
+  }
+
+  h2 {
+    text-align: center;
+    color: white;
+    padding: 16px;
+  }
+  .headline-form {
+    margin: 0 auto;
+    width: 80%;
+
+    button {
+      width: 60%;
+      bottom: 5%;
+    }
+  }
+}
+
+.post-index-wrapper {
+}
