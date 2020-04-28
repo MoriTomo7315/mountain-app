@@ -38,7 +38,7 @@
 
         <v-btn
           color="secondary"
-          @click="passwordSignup"
+          @click.native="passwordSignup"
           x-large
           nuxt
           to="/"
@@ -87,15 +87,17 @@ export default {
     },
     async passwordSignup () {
       const userData = this.getJSONUser()
-      await firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
-        .then( () => {
-          db.collection('users').add(userData)
-          this.fetchUser(userData)
-          this.login()
-        })
-        .catch((error) => {
-          alert(error.message)
-        })
+      // await firebase.auth().createUserWithEmailAndPassword(this.email, this.password)
+      //   .then( () => {
+      //     db.collection('users').add(userData)
+      //     this.fetchUser(userData)
+      //     this.login()
+      //   })
+      //   .catch((error) => {
+      //     alert(error.message)
+      //   })
+      this.fetchUser(userData)
+      this.login()
     }
   }
 }

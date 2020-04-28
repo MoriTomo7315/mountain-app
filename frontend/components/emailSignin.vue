@@ -7,7 +7,6 @@
           v-model="email"
           label="E-mail"
           outlined
-          required
         ></v-text-field>
 
         <v-text-field
@@ -15,12 +14,11 @@
           label="password"
           outlined
           type="password"
-          required
         ></v-text-field>
         <v-btn
           color="secondary"
           class="mr-4"
-          @click="passworLogin"
+          @click.native="login"
           x-large
           nuxt
           to="/"
@@ -52,14 +50,14 @@ export default {
   computed: {
     ...mapState({
       user: state => state.user.user,
-      loginStatus: state => state.user.loginStatus
     })
   },
   methods: {
     ...mapActions('user',[
-      'login'
+      "login"
     ]),
     passworLogin () {
+      this.login()
       firebase.auth().signInWithEmailAndPassword(this.email, this.password)
         .then( () => {
           this.login()
@@ -67,7 +65,7 @@ export default {
         .catch((error) => {
           alert(error.message)
         })
-  }
+    }
   }
 }
 </script>

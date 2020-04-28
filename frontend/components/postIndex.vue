@@ -11,7 +11,6 @@
       >
         <v-card
           class="ma-2"
-          flat
         >
           <v-img
             class="white--text align-end"
@@ -42,16 +41,11 @@
             </v-list-item>
           </v-list>
           <v-card-actions>
+            <v-spacer />
             <v-btn
               nuxt
               to='#'
-            ><v-icon>fas fa-user</v-icon>〇〇</v-btn>
-            <v-spacer />
-            <v-btn
-              icon
-              nuxt
-              to='/'
-            ><v-icon color="#00aced">fab fa-twitter</v-icon></v-btn>
+            ><v-icon>fas fa-user</v-icon>〇〇〇〇〇〇〇〇</v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
