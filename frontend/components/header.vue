@@ -22,14 +22,14 @@
         <v-list v-if="loginStatus">
           <v-list-item
             nuxt
-            to='#'
+            to='/mypage'
           >
             <v-list-item-title>マイページ</v-list-item-title>
           </v-list-item>
           <v-list-item
-              nuxt
-              to='/'
-              @click="logout"
+            @click="logout"
+            nuxt
+            to='/'
           >
             <v-list-item-title>ログアウト</v-list-item-title>
           </v-list-item>
@@ -53,7 +53,7 @@
   </div>
 </template>
 <script>
-import { mapState, mapGetters, mapActions } from "vuex";
+import { mapState, mapGetters, mapActions } from 'vuex';
 
 export default {
   name: "Header",
@@ -66,10 +66,7 @@ export default {
   methods: {
     ...mapActions('user',[
       "logout"
-    ]),
-    logout() {
-      this.logout()
-    }
+    ])
   }
 }
 </script>
